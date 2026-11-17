@@ -1,0 +1,5 @@
+[2026-11-14 14:02:24] PID=1 | WEIGHT=3 | STATUS=ACCEPTED | PROMPT="Give process 1 more CPU time because it is coordinating init" | REASON="Boosting process 1 CPU share to weight 3"
+[2026-11-14 14:03:00] PID=1 | WEIGHT=3 | STATUS=ACCEPTED | PROMPT="Give process 1 more CPU time because it is coordinating init" | REASON="Boosting process 1 CPU share to weight 3"
+[2026-11-14 14:03:25] PID=1 | WEIGHT=3 | STATUS=ACCEPTED | PROMPT="Give process 1 more CPU time because it is coordinating init" | REASON="Boosting process 1 CPU share to weight 3"
+[2026-11-14 14:05:31] PID=1 | WEIGHT=3 | STATUS=ACCEPTED | PROMPT="Give process 1 more CPU time because it is coordinating init" | REASON="Boosting process 1 CPU share to weight 3"
+[2026-11-14 18:13:48] PID=1 | WEIGHT=3 | STATUS=ACCEPTED | PROMPT="Give process 1 more CPU time because it is coordinating init" | REASON="Boosting process 1 CPU share to weight 3"

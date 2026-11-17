@@ -1,0 +1,10 @@
+{
+  "min_weight": 1,
+  "max_weight": 5,
+  "default_weight": 1,
+  "rate_limit_per_minute": 30,
+  "allowed_commands": [
+    "setweight",
+    "schedctl"
+  ]
+}
