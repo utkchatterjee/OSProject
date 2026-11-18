@@ -3,7 +3,7 @@
 *Project report — OS Project\
 Utkarsh Chatterjee \[B24CS050\], Yash Bhardwaj \[B24CS053\]*
 
-**GitHub Repository:** \[INSERT GITHUB REPO LINK HERE\]
+**GitHub Repository:** \[https://github.com/utkchatterjee/OSProject\]
 
 ## 1. Overview
 
