@@ -451,8 +451,10 @@ scheduler(void)
       acquire(&p->lock);
       if (p->state == RUNNABLE) {
         int w = p->weight;
-        if (w < MIN_WEIGHT) w = MIN_WEIGHT;
-        if (w > MAX_WEIGHT) w = MAX_WEIGHT;
+        if (w < MIN_WEIGHT)
+          w = MIN_WEIGHT;
+        if (w > MAX_WEIGHT)
+          w = MAX_WEIGHT;
 
         for (int q = 0; q < w; q++) {
           if (p->state != RUNNABLE)
@@ -774,13 +776,8 @@ int
 procstatsread(int user_dst, uint64 dst, int n)
 {
   static char *states[] = {
-    [UNUSED]   = "unused",
-    [USED]     = "used  ",
-    [SLEEPING] = "sleep ",
-    [RUNNABLE] = "runble",
-    [RUNNING]  = "run   ",
-    [ZOMBIE]   = "zombie"
-  };
+    [UNUSED] = "unused",   [USED] = "used  ",    [SLEEPING] = "sleep ",
+    [RUNNABLE] = "runble", [RUNNING] = "run   ", [ZOMBIE] = "zombie"};
   struct proc *p;
   char buf[512];
   int off = 0;
@@ -815,4 +812,3 @@ procstatsread(int user_dst, uint64 dst, int n)
     return -1;
   return to_copy;
 }
-

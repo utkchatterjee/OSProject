@@ -25,8 +25,8 @@ main(int argc, char *argv[])
     while (read(fd, tmp, sizeof(tmp)) > 0)
       ;
 
-    fprintf(fd, "[ticks=%d] PID %d: weight -> %d | %s | reason: ",
-            cur_ticks, pid, weight, (res == 0 ? "ACCEPTED" : "REJECTED"));
+    fprintf(fd, "[ticks=%d] PID %d: weight -> %d | %s | reason: ", cur_ticks,
+            pid, weight, (res == 0 ? "ACCEPTED" : "REJECTED"));
     if (argc >= 4) {
       for (int i = 3; i < argc; i++) {
         fprintf(fd, "%s%s", argv[i], (i == argc - 1 ? "" : " "));
@@ -43,6 +43,7 @@ main(int argc, char *argv[])
     exit(1);
   }
 
-  printf("schedctl: PID %d weight set to %d (logged to /sched.log)\n", pid, weight);
+  printf("schedctl: PID %d weight set to %d (logged to /sched.log)\n", pid,
+         weight);
   exit(0);
 }

@@ -25,7 +25,8 @@ main(int argc, char *argv[])
     w2 = atoi(argv[3]);
   }
   printf("=== SchedAI WRR Benchmark Starting ===\n");
-  printf("Testing 2 concurrent workloads on CPUS=1 (iters=%d, w1=%d, w2=%d)\n", iters, w1, w2);
+  printf("Testing 2 concurrent workloads on CPUS=1 (iters=%d, w1=%d, w2=%d)\n",
+         iters, w1, w2);
 
   int pipe1[2], pipe2[2];
   int sync_pipe[2];
@@ -103,9 +104,13 @@ main(int argc, char *argv[])
   printf("Child 2 (Weight %d) elapsed: %d ticks\n", w2, elapsed2);
 
   if (w1 == w2) {
-    int delta = (elapsed1 > elapsed2) ? elapsed1 - elapsed2 : elapsed2 - elapsed1;
-    printf("BASELINE VERIFIED: Both tasks with identical weight %d completed with equal priority (delta: %d ticks).\n", w1, delta);
-  } else if ((w2 > w1 && elapsed2 <= elapsed1) || (w1 > w2 && elapsed1 <= elapsed2)) {
+    int delta =
+      (elapsed1 > elapsed2) ? elapsed1 - elapsed2 : elapsed2 - elapsed1;
+    printf(
+      "BASELINE VERIFIED: Both tasks with identical weight %d completed with equal priority (delta: %d ticks).\n",
+      w1, delta);
+  } else if ((w2 > w1 && elapsed2 <= elapsed1) ||
+             (w1 > w2 && elapsed1 <= elapsed2)) {
     int fast = (elapsed2 < elapsed1) ? elapsed2 : elapsed1;
     int slow = (elapsed2 < elapsed1) ? elapsed1 : elapsed2;
     if (fast > 0) {

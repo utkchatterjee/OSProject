@@ -119,4 +119,3 @@ sys_setweight(void)
   argint(1, &weight);
   return set_proc_weight(pid, weight);
 }
-
